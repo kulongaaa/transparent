@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <bar/>
     <div class="picture1"></div>
      <div class="picture1"></div>
       <div class="picture1"></div>
@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import bar from './components/bar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    bar
   }
 }
 </script>
@@ -29,9 +29,10 @@ body{
 }
 .picture1{
     background: url("./assets/1.jpg") no-repeat center;
-    width: 461px;
-    height: 430px;
+    width:100%;
+    height:500px;
     background-size: 461px 430px;
+ max-width: 100%;
     
 }
 </style>

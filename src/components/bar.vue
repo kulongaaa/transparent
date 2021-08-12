@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'bar',
   data(){
     return{
 

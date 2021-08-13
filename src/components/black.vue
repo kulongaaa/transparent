@@ -5,10 +5,10 @@
         <div class="black-1">深色世界。</div>
         <div class="black-1">&nbsp;酷&nbsp;&nbsp;&nbsp;珑。&nbsp;</div>
       </div>
-    
       <div class="picture2" ref="img"></div>
       </div>
   </div>
+  
 </template>
 
 <script>
@@ -18,39 +18,34 @@ export default {
   data() {
     return {};
   },
-  // mounted() {
-  //   const img = this.$refs.img;
-  //   const factor = 0.008;
-  //   let count = 1;
-  //   mousewheel(document.body, function (e) {
-  //     if (e.wheelDetail < 0) {
-  //       // console.log(img.getBoundingClientRect().top);
-  //       if (img.getBoundingClientRect().top < 50&&img.getBoundingClientRect().left>0) {
-  //         //    img.style.width=img.offsetWidth+1+'px'
-  //         img.style.transform = `matrix(${count}, 0, 0, ${count}, 0, 0)`;
-  //         count += factor;
-  //       }
+  mounted() {
+    
+     window.addEventListener('scroll',()=>{
+      let nostuckyoffset = document.documentElement.clientHeight * 2
+      let scrolled1 =document.documentElement.scrollTop/nostuckyoffset
+      let $row=document.querySelector('.picture2')
+      if (scrolled1>2.7&&scrolled1<=3) {
+      $row.style.transform = `matrix(${(1+(scrolled1-2.7)*9)}, 0, 0, ${(1+(scrolled1-2.7)*9)}, 0, 0)`;
 
-  //     } else {
-  //         if(count>1)
-  //         {
-  //       img.style.transform = `matrix(${count}, 0, 0, ${count}, 0, 0)`;
-  //       count -= factor;
-  //         }
-  //     }
-  //   });
-  // },
+      }
+     
+    })
+  },
   methods: {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .row {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
+  height: 900px;
+  top:2200px;
 }
 .picture2 {
   background: url("../assets/2.png") no-repeat;

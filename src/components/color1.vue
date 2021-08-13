@@ -2,7 +2,7 @@
   <div class="sticky-container">
       <div class="iphone black">
        <h3>
-         Conmes in Black<br>
+         Comes in Black<br>
          &nbsp;
        </h3>
        <img src="../assets/black.png">
@@ -35,18 +35,18 @@ export default {
   },
   mounted(){
     window.addEventListener('scroll',()=>{
-      // let nostuckyoffset = document.documentElement.clientHeight * 2
-      // let scrolled =document.documentElement.scrollTop/nostuckyoffset
-      let scrolled =document.documentElement.scrollTop/
-      (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+      let nostuckyoffset = document.documentElement.clientHeight * 2
+      let scrolled =document.documentElement.scrollTop/nostuckyoffset
+      // let scrolled =document.documentElement.scrollTop/
+      // (document.documentElement.scrollHeight - document.documentElement.clientHeight)
 
       console.log(scrolled);
       let $white=document.querySelector('.white')
       let $red=document.querySelector('.red')
-      $white.style.clipPath=`inset(${((0.5 - scrolled)/0.5)*100}% 0px 0px 0px)`
-      $red.style.clipPath=`inset(${((1 - scrolled)/0.5)*100}% 0px 0px 0px)`
+      $white.style.clipPath=`inset(${((1.21 - scrolled)/0.5)*100}% 0px 0px 0px)`
+      $red.style.clipPath=`inset(${((1.71 - scrolled)/0.5)*100}% 0px 0px 0px)`
          
-         if(scrolled>=1){
+         if(scrolled>=1.71){
            document.querySelector('.sticky-container').classList.add('no-sticky')
          }
          else{
@@ -73,18 +73,16 @@ export default {
   --iphone-offscreen:-720px;
 
 }
+
 .sticky-container{
-  margin:0;
-  height: 3000px;
-  font-family:Helvetica;
   background-color: #000;
-}
-.sticky-container{
+  font-size: 48px;
   position:sticky;
   top:0;
   width:100%;
   height: 100vh;
   overflow: hidden;
+  font-family:Helvetica;
 }
 .sticky-container .iphone{
   display: flex;

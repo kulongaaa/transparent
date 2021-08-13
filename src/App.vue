@@ -34,6 +34,6 @@ body{
  overflow-x:hidden
 }
 #app {
-height: 9000px;
+height: 6000px;
 }
 </style>

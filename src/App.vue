@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <bar/>
-    <div class="picture1"></div>
-     <div class="picture1"></div>
-      <div class="picture1"></div>
+    <!-- <bar/>
+    <ip12/> -->
+    <color1/>
+    <!-- <black/> -->
   </div>
 </template>
 
 <script>
-import bar from './components/bar.vue'
-
+// import bar from './components/bar.vue'
+// import ip12 from './components/ip12.vue'
+// import black from './components/black.vue'
+import color1 from './components/color1.vue'
 export default {
   name: 'App',
   components: {
-    bar
+    // bar,
+    // ip12,
+    // black,
+    color1
   }
 }
-</script>
 
+</script>
 <style>
 body{
   margin: 0;
@@ -26,13 +31,5 @@ body{
 }
 #app {
 
-}
-.picture1{
-    background: url("./assets/1.jpg") no-repeat center;
-    width:100%;
-    height:500px;
-    background-size: 461px 430px;
- max-width: 100%;
-    
 }
 </style>
